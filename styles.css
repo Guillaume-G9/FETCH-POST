@@ -5,9 +5,15 @@
     font-size: 1.1em;
 }
 
+ul {
+    list-style: square;
+}
+
 body {
     display: flex;
     justify-content: center;
+    margin: 3%;
+    gap: 3%;
     align-items: center;
     height: 100vh;
 }
@@ -23,6 +29,18 @@ body {
     gap: 2%;
     justify-content: center;
 
+}
+
+.container2 {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.116);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    justify-content: center;
 }
 
 .container * {

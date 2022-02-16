@@ -2,6 +2,7 @@ let campaignName = document.querySelector("#campaign");
 let websiteUrl = document.querySelector("#website");
 let clientName = document.querySelector("#name");
 let email = document.querySelector("#email");
+let inputPost = document.querySelector("#get-text")
 
 async function post(){
     try {
@@ -20,7 +21,6 @@ async function post(){
             })
          });
          const data = await response.json();
-         alert("POST SUCCESSFULL!");
        } catch(error) {
            alert("POST ERROR!")
          } 
@@ -38,11 +38,19 @@ const getPost = async () => {
               }})
         
          const data = await response.json();
-         console.log(data);
+         console.log(data)
+        inputPost.innerHTML = `
+        <div>
+          <p>CLIENT REQUEST:</p><br>
+          <ul>
+            <li>${data.keys[0].metadata.leadName}</li>
+            <li>${data.keys[0].metadata.leadEmail}</li>
+            <li>${data.keys[0].metadata.city}</li>
+          </ul>
+         </div>`
        } catch(error) {
           console.log(error)
          } 
     }
 
-
-getPost()
+    getPost()
