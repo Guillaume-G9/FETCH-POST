@@ -10,7 +10,7 @@ async function post(){
          headers: {
            'content-type':'application/json',
            'x-rapidapi-host':'fomoapi.p.rapidapi.com',
-           'x-rapidapi-key':'b5b2ec9656msh285edf6f388e087p1f0c5ajsn3b5bb3db591c'
+           'x-rapidapi-key':'99ed28ae2amshd0e344647972e02p17576bjsndea49b53a920'
            },
            body: JSON.stringify({
             idCampaign: campaignName.value,
@@ -29,12 +29,12 @@ async function post(){
 
 const getPost = async () => {
     try {
-        const response = await fetch('https://fomoapi.p.rapidapi.com/',{
+        const response = await fetch('https://fomoapi.p.rapidapi.com/?id=Guillaume',{
             method: 'GET',
             headers: {
               'content-type':'application/json',
               'x-rapidapi-host':'fomoapi.p.rapidapi.com',
-              'x-rapidapi-key':'b5b2ec9656msh285edf6f388e087p1f0c5ajsn3b5bb3db591c'
+              'x-rapidapi-key':'99ed28ae2amshd0e344647972e02p17576bjsndea49b53a920'
               }})
         
          const data = await response.json();
